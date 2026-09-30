@@ -610,15 +610,15 @@
       // PREPARAR DATOS
 
       var formData = new FormData(sponsorForm);
-      formData.append('_subject', 'Nueva solicitud de patrocinio - Team Merengue');
-      formData.append('_captcha', 'false');
-      formData.append('_template', 'table');
+      formData.append('access_key', '7ecd880f-1a92-4027-b303-eb5701b63365');
+      formData.append('subject', 'Nueva solicitud de patrocinio - Team Merengue');
+      formData.append('email', correo.value.trim());
 
 
-      // ENVIAR A TEAM MERENGUE
+      // ENVIAR (WEB3FORMS)
 
       fetch(
-        'https://formsubmit.co/ajax/teammerengue10635@gmail.com',
+        'https://api.web3forms.com/submit',
         {
           method: 'POST',
           body: formData,
@@ -633,7 +633,7 @@
         return response.json().then(function (data) {
 
           console.log('STATUS:', response.status);
-          console.log('RESPUESTA FORMSUBMIT:', data);
+          console.log('RESPUESTA WEB3FORMS:', data);
 
           if (!response.ok || data.success === 'false' || data.success === false) {
             throw new Error(data.message || 'Error al enviar el formulario');
@@ -674,7 +674,7 @@
 
       .catch(function (error) {
 
-        console.error('ERROR FORMSUBMIT:', error);
+        console.error('ERROR WEB3FORMS:', error);
 
         if (status) {
 
@@ -769,15 +769,15 @@
       // PREPARAR DATOS
 
       var formData = new FormData(contactForm);
-      formData.append('_subject', 'Nuevo mensaje de contacto - Team Merengue');
-      formData.append('_captcha', 'false');
-      formData.append('_template', 'table');
+      formData.append('access_key', '7ecd880f-1a92-4027-b303-eb5701b63365');
+      formData.append('subject', 'Nuevo mensaje de contacto - Team Merengue');
+      formData.append('email', correo.value.trim());
 
 
-      // ENVIAR A TEAM MERENGUE
+      // ENVIAR (WEB3FORMS)
 
       fetch(
-        'https://formsubmit.co/ajax/teammerengue10635@gmail.com',
+        'https://api.web3forms.com/submit',
         {
           method: 'POST',
           body: formData,
@@ -792,7 +792,7 @@
         return response.json().then(function (data) {
 
           console.log('STATUS:', response.status);
-          console.log('RESPUESTA FORMSUBMIT:', data);
+          console.log('RESPUESTA WEB3FORMS:', data);
 
           if (!response.ok || data.success === 'false' || data.success === false) {
             throw new Error(data.message || 'Error al enviar el formulario');
@@ -823,7 +823,7 @@
 
       .catch(function (error) {
 
-        console.error('ERROR FORMSUBMIT:', error);
+        console.error('ERROR WEB3FORMS:', error);
 
         if (status) {
 
